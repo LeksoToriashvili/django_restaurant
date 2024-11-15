@@ -1,2 +1,3 @@
 # django_restaurant
-Restaurant Menu App - Django Rest
+### Restaurant Menu App - Django Rest  
+Full project will be added very soon...
