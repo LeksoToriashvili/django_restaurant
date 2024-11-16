@@ -5,7 +5,7 @@ from rest.models import Restaurant, Category, SubCategory, Dish, Ingredient
 
 @admin.register(Restaurant)
 class RestaurantAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'address', 'phone', 'image')
+    list_display = ('name', 'address', 'phone', 'image')
 
 
 @admin.register(Category)
