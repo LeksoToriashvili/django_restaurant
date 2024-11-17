@@ -17,7 +17,7 @@ class UserSerializer(serializers.ModelSerializer):
         # Create the user instance
         password = validated_data.pop('password')
         user = User.objects.create(**validated_data)
-        user.set_password(password)  # Hash the password
+        user.set_password(password)
         user.save()
         return user
 
@@ -48,6 +48,7 @@ class IngredientSerializer(serializers.ModelSerializer):
 
 class DishSerializer(serializers.ModelSerializer):
     ingredients = IngredientSerializer(many=True)
+
     class Meta:
         model = Dish
         fields = '__all__'

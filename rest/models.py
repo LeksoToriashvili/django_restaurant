@@ -42,7 +42,7 @@ class Dish(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=255)
-    dish = models.ManyToManyField(Dish, related_name='ingredients')
+    Dish = models.ForeignKey(Dish, on_delete=models.CASCADE, related_name='ingredients')
 
     def __str__(self):
         return self.name
